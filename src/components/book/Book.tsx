@@ -1,4 +1,4 @@
-import {BookBox, Land, Title, TitleContainer} from "./book.style.ts";
+import {Backface, BookBox, Container, Land, Title, TitleContainer} from "./book.style.ts";
 import Star from "./star/Star.tsx";
 import React from "react";
 import SmallStar from "./smallStar/SmallStar.tsx";
@@ -66,16 +66,19 @@ const Book: React.FC = () => {
     }
 
     return (
-        <BookBox>
-            {renderStar()}
-            {renderSmallStar()}
-            <TitleContainer>
-                <Title>
-                    Portfolio
-                </Title>
-            </TitleContainer>
-            <Land/>
-        </BookBox>
+        <Container>
+            <BookBox>
+                {renderStar()}
+                {renderSmallStar()}
+                <TitleContainer>
+                    <Title>
+                        Portfolio
+                    </Title>
+                </TitleContainer>
+                <Land/>
+            </BookBox>
+            <Backface/>
+        </Container>
     )
 }
 
