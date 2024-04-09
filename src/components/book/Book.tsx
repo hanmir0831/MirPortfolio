@@ -9,7 +9,9 @@ const Book: React.FC = () => {
     return (
         <Container>
             <BookCover/>
-            <Page/>
+            <Page pageNum={2}/>
+            <Page pageNum={3}/>
+            <Page pageNum={4}/>
         </Container>
     )
 }

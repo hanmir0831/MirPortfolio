@@ -4,6 +4,9 @@ const flipKeyframes = keyframes`
   0% {
     transform: perspective(3000px) rotateY(0deg);
   }
+  50% {
+    z-index: 1;
+  }
   100% {
     transform: perspective(3000px) rotateY(-180deg);
   }
@@ -26,9 +29,9 @@ export const Container = styled.div<coverProps>`
   
   transform-origin: left;
   backface-visibility: hidden;
-  animation: ${(props: coverProps) => props.isFlipped && css`${flipKeyframes} 2s 0s ease-in-out forwards`};
-  -webkit-animation: ${(props: coverProps) => props.isFlipped && css`${flipKeyframes} 2s 0s ease-in-out forwards`};
-  -moz-animation: ${(props: coverProps) => props.isFlipped && css`${flipKeyframes} 2s 0s ease-in-out forwards`};
+  animation: ${(props: coverProps) => props.isFlipped && css`${flipKeyframes} 2s 0s forwards`};
+  -webkit-animation: ${(props: coverProps) => props.isFlipped && css`${flipKeyframes} 2s 0s forwards`};
+  -moz-animation: ${(props: coverProps) => props.isFlipped && css`${flipKeyframes} 2s 0s forwards`};
 `
 
 export const BookBox = styled.div`
